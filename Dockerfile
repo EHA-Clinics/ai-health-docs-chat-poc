@@ -1,5 +1,5 @@
 # Use the official Python base image
-FROM 3.11.5-bullseye
+FROM python:3.11.5-bullseye
 
 # Set the working directory in the container
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install the Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the application code into the container
 COPY . .
